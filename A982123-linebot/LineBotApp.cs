@@ -99,6 +99,22 @@ public class LineBotApp : WebhookApplication
 
     private void TeachDog(string inputMsg)
     {
-        
+        try
+        {
+            string[] subs = inputMsg.Split(';');
+
+            if (subs.Length == 3)
+            {
+                if (subs[0] == "ABC")
+                {
+                    _pool.Add(subs[1],subs[2]);
+                }
+            }
+        }
+        catch (Exception exp)
+        {
+            Console.WriteLine(exp);
+            throw;
+        }
     }
 }
