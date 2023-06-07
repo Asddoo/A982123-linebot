@@ -93,7 +93,6 @@ public class LineBotApp : WebhookApplication
             Console.WriteLine(exp);
             throw;
         }
-        
         return result;
     }
 
